@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced MP4 Player</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="video-container">
+        <video id="videoPlayer" width="640" height="360">
+            <source src="big_buck_bunny_720p_1mb.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="controls">
+            <button id="playPauseBtn" aria-label="Play/Pause">Play</button>
+            <button id="stopBtn" aria-label="Stop">Stop</button>
+            <button id="rewindBtn" aria-label="Rewind 10 seconds">Rewind 10s</button>
+            <button id="forwardBtn" aria-label="Forward 10 seconds">Forward 10s</button>
+            <button id="muteBtn" aria-label="Mute/Unmute">Mute</button>
+            <input type="range" id="volumeSlider" min="0" max="1" step="0.1" value="1" aria-label="Volume">
+            <input type="range" id="seekSlider" min="0" max="100" value="0" aria-label="Seek">
+            <span id="currentTime">0:00</span> / <span id="totalTime">0:00</span>
+            <select id="playbackRate" aria-label="Playback Speed">
+                <option value="0.5">0.5x</option>
+                <option value="1" selected>1x</option>
+                <option value="1.5">1.5x</option>
+                <option value="2">2x</option>
+            </select>
+            <button id="fullscreenBtn" aria-label="Fullscreen">Fullscreen</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
